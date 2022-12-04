@@ -5,7 +5,8 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.dispatcher.filters import Command
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 import aiohttp
-from bot import config, keyboard
+import config
+import keyboard
 from bs4 import BeautifulSoup
 import re
 
@@ -97,7 +98,7 @@ async def get_message(message):
             'Восход', 'Днепр', 'ЗиД', 'ИЖ', 'Минск', 'Урал', 'Эксклюзив'}
 
     if message.text in bike:
-        await bot.send_message(message.chat.id, text=f"Идет поиск, пожалуйста обождите", parse_mode='Markdown')
+        await bot.send_message(message.chat.id, text=f"Идет поиск, пожалуйста подождите", parse_mode='Markdown')
 
         async def get_content(session_request, mess):
             """
