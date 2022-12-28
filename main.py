@@ -164,7 +164,6 @@ async def get_message(message):
                                                                 f"Цена в BYN: {price_car_byn}\n"
                                                                 f"Цена в USD:{price_car_usd.replace('≈', ' ')}",
                                                parse_mode='Markdown')
-                        await asyncio.sleep(0.4)
                         print(f'params_car: pass')
                 except Exception as ex:
                     print(f'Some {ex} here.')
